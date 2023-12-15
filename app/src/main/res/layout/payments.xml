@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <data>
+
+    </data>
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".screens.transactions.Payments">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:fitsSystemWindows="false"
+                android:orientation="vertical"
+                tools:behavior_hideable="true">
+
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="ltr"
+                    android:layout_margin="20dp">
+
+                <ImageView
+                        android:id="@+id/btn_Back"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_arrow_back"
+                        android:layout_gravity="start|center"
+                        app:tint="@color/green" />
+
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="22sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:text="Pagos"/>
+
+            </FrameLayout>
+
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="40dp"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/gray" />
+
+
+            <androidx.legacy.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tarjeta 4152 3130 1212 3698 "
+                    android:layout_marginStart="30dp"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_card"/>
+
+            <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout_payments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabMode="fixed"/>
+
+            <androidx.legacy.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"/>
+
+            <TextView
+                    android:id="@+id/titulo_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuevo Servicio"
+                    android:layout_marginStart="0sp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+            <LinearLayout
+                    android:id="@+id/containerMovimientos"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <EditText
+                        android:id="@+id/nombre_servicio"
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:hint="Nombre Servicio"/>
+
+                <EditText
+                        android:id="@+id/referencia"
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:hint="Referencia"/>
+
+
+
+                <EditText
+                        android:id="@+id/monto"
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:hint="Monto"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNext"
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:inputType="text"
+                        android:textSize="18sp"
+                        android:background="@drawable/bg_btn_1"
+                        android:text="Guardar"/>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/containerSaldos"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <EditText
+                        android:id="@+id/nombre_servicio_cfe"
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:hint="CFE"/>
+
+                <EditText
+                        android:id="@+id/referencia_cfe"
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:hint="00152361212-2"/>
+
+
+
+                <EditText
+                        android:id="@+id/monto_cfe"
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:hint="Monto"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNext2"
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:inputType="text"
+                        android:textSize="18sp"
+                        android:background="@drawable/bg_btn_1"
+                        android:text="Pagar"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/containerEC"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <EditText
+                        android:id="@+id/nombre_servicio_siapa"
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:hint="SIAPA"/>
+
+                <EditText
+                        android:id="@+id/referencia_siapa"
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:hint="001895212-23"/>
+
+
+
+                <EditText
+                        android:id="@+id/monto_siapa"
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:hint="Monto"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNext3"
+                        android:layout_margin="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:inputType="text"
+                        android:textSize="18sp"
+                        android:background="@drawable/bg_btn_1"
+                        android:text="Pagar"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+</layout>
